@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MWLIN</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!--Adding paper elements -->     
+  <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+  <script src="bower_components/platform/platform.js"></script>
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild-->
+  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+  <script src="bower_components/platform/platform.js"></script>
+  <!-- build:vulcanized elements/elements.vulcanized.html -->
+  <link rel="import" href="elements/elements.html">
+  <link rel="import" href="components/paper-checkbox/paper-checkbox.html">    
+  <link rel="import" href="components/core-label/core-label.html">    
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">    
+  <!-- endbuild-->
+<!--  <link rel="import" href="bower_components/core-pages/core-pages.html">    -->
+  <style type="text/css">
+ 
+    @font-face {
+    font-family: roboto;
+    src: url(assets/Roboto-Light.ttf);
+    }  
+      
+      
+  html,body{
+  height: 100%;
+  margin: 0;      
+  background-color: #E5E5E5;      
+  font-family: 'roboto';
+  color:gray;          
+  }  
+
+  core-toolbar{
+  position: fixed;
+  width: 100%;
+  margin-top: -17px;
+/*      background-image:url(assets/sample_card.jpg);*/
+  background-color:#4285f4;
+  color:white;
+  height: 80px;  
+  padding-top: 13px;      
+        
+  }
+ 
+  paper-item{
+  background-color: white;
+  color:black;
+  }
+
+  .todo-card{
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  min-height: 100px;
+  top:154px;
+  color:black;      
+  display:block;
+  padding-left:2%;  
+  padding-top:30px;
+  padding-bottom:30px;      
+  margin-left:8%;
+  margin-right:10%;  
+  margin-top:16px;
+  vertical-align: top;
+  background-color: #fff;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.24);
+  }
+      
+  paper-checkbox{
+      margin-right:12px;
+      margin-top:10px;
+  }
+ paper-tab{
+     color:white;
+     font-weight: 700;
+     background-color: #2980b9;
+ }
+  </style>
+</head>
+
+<body>
+<core-toolbar>
+    
+    
+<paper-icon-button icon="menu"></paper-icon-button>
+<!--<paper-menu-button icon="favorite" halign="right"></paper-menu-button>     -->
+    <span flex><h4>Made with <font color="#D64541">❤</font> in India.</h4></span>
+<paper-menu-button icon="search" halign="right"></paper-menu-button>    
+<paper-menu-button icon="more-vert" halign="right">
+    <paper-item>Hello</paper-item>
+    <paper-item>Hey</paper-item>
+</paper-menu-button>    <br>
+    
+</core-toolbar><br><br><br>
+<paper-tabs selected="0">
+  <paper-tab>WEBSITES</paper-tab>
+  <paper-tab>APPS</paper-tab>
+  <paper-tab>HARDWARE HACKS</paper-tab>
+</paper-tabs>    
+
+</body>
+
+</html>
