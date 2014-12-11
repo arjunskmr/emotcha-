@@ -1,4 +1,4 @@
-emotcha-
-========
+reqxt
+=====
 
-Free reliable image based CAPTCHA without compromise on security.
+Its a browser extension web app combo to save stuffs that matter ! 

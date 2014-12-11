@@ -4,109 +4,113 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MWLIN</title>
+  <title>EMOCHA</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <!--Adding paper elements -->     
-  <link rel="import" href="bower_components/paper-elements/paper-elements.html">
-  <script src="bower_components/platform/platform.js"></script>
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="styles/main.css">
-  <!-- endbuild-->
-  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-  <script src="bower_components/platform/platform.js"></script>
-  <!-- build:vulcanized elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
-  <link rel="import" href="components/paper-checkbox/paper-checkbox.html">    
-  <link rel="import" href="components/core-label/core-label.html">    
-  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">    
-  <!-- endbuild-->
-<!--  <link rel="import" href="bower_components/core-pages/core-pages.html">    -->
-  <style type="text/css">
- 
-    @font-face {
-    font-family: roboto;
-    src: url(assets/Roboto-Light.ttf);
-    }  
-      
-      
-  html,body{
-  height: 100%;
-  margin: 0;      
-  background-color: #E5E5E5;      
-  font-family: 'roboto';
-  color:gray;          
-  }  
-
-  core-toolbar{
-  position: fixed;
-  width: 100%;
-  margin-top: -17px;
-/*      background-image:url(assets/sample_card.jpg);*/
-  background-color:#4285f4;
-  color:white;
-  height: 80px;  
-  padding-top: 13px;      
-        
-  }
- 
-  paper-item{
-  background-color: white;
-  color:black;
-  }
-
-  .todo-card{
-  position: relative;
-  display: inline-block;
-  width: 80%;
-  min-height: 100px;
-  top:154px;
-  color:black;      
-  display:block;
-  padding-left:2%;  
-  padding-top:30px;
-  padding-bottom:30px;      
-  margin-left:8%;
-  margin-right:10%;  
-  margin-top:16px;
-  vertical-align: top;
-  background-color: #fff;
-  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.24);
-  }
-      
-  paper-checkbox{
-      margin-right:12px;
-      margin-top:10px;
-  }
- paper-tab{
-     color:white;
-     font-weight: 700;
-     background-color: #2980b9;
- }
-  </style>
-</head>
-
+<script src="bower_components/platform/platform.js"></script>    
+<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="bower_components/core-menu/core-menu.html">
+<link rel="import" href="bower_components/core-item/core-item.html">
+<link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/core-icons/core-icons.html">
+<link rel="import" href="bower_components/core-icons/av-icons.html">
+<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+<!--<link rel="import" href="bower_components/topeka-elements/avatars.html">-->
+<link rel="import" href="bower_components/core-icon/core-icon.html">   
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #core_scaffold {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+      }
+      #core_header_panel {
+        background-color: rgb(255, 255, 255);
+      }
+      #core_toolbar {
+        color: rgb(255, 255, 255);
+        background-color: rgb(79, 125, 201);
+      }
+      #core_card {
+        position: static;
+        width: 90%;
+        height: 300px;
+        border-radius: 2px;
+        box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+        left: 280px;
+        top: 100px;
+        margin: 10px 5%;
+        background-color: rgb(255, 255, 255);
+      }
+      #core_header_panel1 {
+        width: 300px;
+        height: 400px;
+        left: 1340px;
+        top: 350px;
+      }
+      #core_menu_button {
+        left: 1270px;
+        top: 380px;
+      }
+      #paper_ripple {
+        width: 300px;
+        height: 300px;
+        left: 1170px;
+        top: 470px;
+      }
+      #div2 {
+        position: relative;
+        left: 90%;
+        top: 90%;
+      }
+      #core_icon {
+        height: 64px;
+        width: 64px;
+        left: 940px;
+        top: 0px;
+        position: absolute;
+      }
+    </style>
 <body>
-<core-toolbar>
-    
-    
-<paper-icon-button icon="menu"></paper-icon-button>
-<!--<paper-menu-button icon="favorite" halign="right"></paper-menu-button>     -->
-    <span flex><h4>Made with <font color="#D64541">❤</font> in India.</h4></span>
-<paper-menu-button icon="search" halign="right"></paper-menu-button>    
-<paper-menu-button icon="more-vert" halign="right">
-    <paper-item>Hello</paper-item>
-    <paper-item>Hey</paper-item>
-</paper-menu-button>    <br>
-    
-</core-toolbar><br><br><br>
-<paper-tabs selected="0">
-  <paper-tab>WEBSITES</paper-tab>
-  <paper-tab>APPS</paper-tab>
-  <paper-tab>HARDWARE HACKS</paper-tab>
-</paper-tabs>    
+    <polymer-element name="my-element">
 
+  
+    
+    <core-scaffold id="core_scaffold">
+      <core-header-panel mode="seamed" id="core_header_panel" navigation flex>
+        <core-toolbar id="core_toolbar"></core-toolbar>
+      </core-header-panel>
+      <core-card id="core_card" layout vertical>
+        <div id="div" layout horizontal>
+          </div>
+        <div id="div1" layout horizontal>
+			</div>
+        <div id="div2" layout horizontal>
+          <paper-fab icon="check" id="paper_fab"></paper-fab>
+        </div>
+      </core-card>
+      <core-icon icon="avatars:avatar-1" id="core_icon" designmeta="topeka-avatar"></core-icon>
+    </core-scaffold>
+  </template>
+
+  <script>
+
+    Polymer({
+      
+    });
+
+  </script>
+
+</polymer-element>
 </body>
 
 </html>
