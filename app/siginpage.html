@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EMOCHA</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<script src="bower_components/platform/platform.js"></script>    
+<link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+<link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="bower_components/core-menu/core-menu.html">
+<link rel="import" href="bower_components/core-item/core-item.html">
+<link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/core-menu/core-submenu.html">
+<link rel="import" href="bower_components/paper-input/paper-input.html">   
+<link rel="import" href="bower_components/paper-button/paper-button.html">
+    
+</head>
+<body>
+    <polymer-element name="my-element">
+
+  
+    <style>    
+      @font-face {
+     font-family: Roboto;
+     src: url(assets/roboto.ttf);
+    }
+         @font-face {
+     font-family: lm;
+     src: url(assets/lm.otf);
+    }
+      #core_scaffold {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        font-family: Roboto;
+      }
+      #core_header_panel {
+        background-color: rgb(255, 255, 255);
+      }
+      #core_toolbar {
+        color: rgb(255, 255, 255);
+        background-color: rgb(79, 125, 201);
+      }
+      #core_menu {
+        font-size: 16px;
+      }
+      #paper_input {
+        left: 10px;
+        top: 30px;
+        position: absolute;
+      }
+      #paper_input1 {
+        left: 10px;
+        top: 130px;
+        position: absolute;
+      }
+      #paper_input2 {
+        left: 10px;
+        top: 80px;
+        position: absolute;
+      }
+      #paper_input3 {
+        left: 10px;
+        top: 180px;
+        position: absolute;
+      }
+      #paper_input4 {
+        left: 10px;
+        top: 250px;
+        position: absolute;
+      }
+        #paper_button {
+        left: 7px;
+        top: 319px;
+        position: absolute;
+        width: 320px;
+        height: 40px;
+        background-color: rgb(82, 110, 156);
+            color:white;
+            font-weight: 700;
+      }
+        #title{
+            color:rgb(82, 110, 156);
+            font-family:roboto;
+            margin-left:7px;
+            margin-top: -10px;
+            
+        }
+        #logo{
+            position: fixed;
+            color:#fff;
+            font-family:lm;
+            margin-left:12px;
+            margin-top: -45px;
+            
+        }
+       
+       
+        
+    </style>
+    <core-scaffold id="core_scaffold">
+      <core-header-panel mode="seamed" id="core_header_panel" navigation flex>
+        <core-toolbar id="core_toolbar"></core-toolbar>
+        <core-menu selected="Item2" valueattr="label" id="core_menu" theme="core-light-theme">
+          </core-menu>
+      </core-header-panel>
+        <h2 id="logo">EMOTCHA</h2><br>
+        <h2 id="title">sign up</h2><br>
+      <paper-input label="username" floatinglabel id="paper_input1"></paper-input>
+      <paper-input label="Email" floatinglabel id="paper_input2" password></paper-input>
+      <paper-input label="password" type="password" floatinglabel id="paper_input3"></paper-input>
+      <paper-input label="confirm password" type="password" floating label id="paper_input4"></paper-input>
+      <paper-input label="Full Name" floatinglabel  id="paper_input"></paper-input>
+      <paper-button id="paper_button" center center-justified>sign me up</paper-button>
+    </core-scaffold>
+ 
+
+  <script>
+
+    Polymer({
+      
+    });
+
+  </script>
+
+</polymer-element>
+</body>
+
+</html>
