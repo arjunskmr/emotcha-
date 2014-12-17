@@ -1,4 +1,5 @@
 <?php
-//server code 
+//server code
+echo "server_connected" ;
 ?>
 
