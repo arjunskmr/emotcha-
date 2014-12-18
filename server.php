@@ -1,5 +1,5 @@
 <?php
-
+echo "check";
 $servername = "localhost";
 $username = "root";
 $password = "limboda";
