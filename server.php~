@@ -1,5 +1,5 @@
 <?php
-echo "check";
+
 $servername = "localhost";
 $username = "root";
 $password = "limboda";
@@ -13,11 +13,18 @@ if ($conn->connect_error) {
     
 } 
 echo "Connected successfully";
-$result = mysql_query("SELECT * FROM session");
+$sql = "SELECT * FROM session";
+$result = $conn->query($sql);
 
-$row = mysql_fetch_array($result);
-
-echo $row['name'];
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo $row["sl_no"];
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
 
 ?>
 
