@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     
 } 
 echo "Connected successfully";
-$result = mysql_query("SELECT sl_no FROM session");
+$result = mysql_query("SELECT * FROM session");
 
 $row = mysql_fetch_array($result);
 
