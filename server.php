@@ -18,13 +18,13 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
    
-        echo $row["session_id"];
+        echo $result["session_id"];
         echo "<br>":
-        echo $row["image_id"];
+        echo $result["image_id"];
         echo "<br>":
-        echo $row["emotion_name"];
+        echo $result["emotion_name"];
         echo "<br>":
-        echo $row["image_name"];
+        echo $result["image_name"];
         echo "<br>":
     
 } else {
