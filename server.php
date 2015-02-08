@@ -5,7 +5,7 @@ $username = "root";
 $password = "limboda";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = mysql_connect ($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
