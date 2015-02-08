@@ -15,12 +15,8 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 mysql_select_db('emotcha_db');
 $val = mysql_query('select * from `active_table`');
-$retval = mysql_query( $val, $conn );
-if(! $retval )
-{
-  die('Could not get data: ' . mysql_error());
-}
-while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+
+while($row = mysql_fetch_array($val, MYSQL_ASSOC))
 {
     echo "{$row['session_id']}  <br> ".
          " {$row['image_name']} <br> ".
