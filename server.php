@@ -13,6 +13,7 @@ if ($conn->connect_error) {
     
 } 
 echo "Connected successfully";
+mysql_select_db('emotcha_db');
 $val = mysql_query('select 1 from `active_table`');
 
 if($val !== FALSE)
