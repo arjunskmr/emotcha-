@@ -11,7 +11,13 @@ if( !$_GET["apikey"] || !$_GET["apisecret"] )
       
      exit();
   }
-
+ 
+ if( ($_GET["apikey"]!="asdasd" )|| ($_GET["apisecret"] !="asdasdasd") )
+  {    
+  	 echo "<br>--incorrect appid or app secret--<br>";
+      
+     exit();
+  }
  
 // Create connection
 $conn = mysql_connect ($servername, $username, $password);
@@ -20,12 +26,7 @@ $conn = mysql_connect ($servername, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     
-} if( (!$_GET["apikey"]=="asdasd" )|| (!$_GET["apisecret"]=="asdasdasd") )
-  {    
-  	 echo "<br>--incorrect appid or app secret--<br>";
-      
-     exit();
-  }
+} 
 echo "<br>". $_GET['apikey']. "<br />";
 echo "-- ". $_GET['apisecret']. " --<br>";
 echo "Connected successfully";
