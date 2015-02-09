@@ -4,10 +4,13 @@ $servername = "localhost";
 $username = "root";
 $password = "limboda";
 
-$key = strtolower($_GET['apikey']);
-$secret = strtolower($_GET['apisecret']);
 
-
+if( $_GET["apikey"] || $_GET["apisecret"] )
+  {
+     echo "Welcome ". $_GET['apikey']. "<br />";
+     echo "You are ". $_GET['apisecret']. " years old.";
+     
+  }
 // Create connection
 $conn = mysql_connect ($servername, $username, $password);
 
