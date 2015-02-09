@@ -7,7 +7,7 @@ $password = "limboda";
 
 if( !$_GET["apikey"] || !$_GET["apisecret"] )
   {    
-  	 echo "<br>--missing appid or app secret--<br>"
+  	 echo "<br>--missing appid or app secret--<br>";
      // echo "<br>". $_GET['apikey']. "<br />";
      // echo "-- ". $_GET['apisecret']. " --";
      
