@@ -7,8 +7,7 @@ $password = "limboda";
 $key = strtolower($_GET['apikey']);
 $secret = strtolower($_GET['apisecret']);
 
-echo "$apikey";
-echo "$apisecret";
+
 // Create connection
 $conn = mysql_connect ($servername, $username, $password);
 
@@ -18,6 +17,8 @@ if ($conn->connect_error) {
     
 } 
 echo "Connected successfully";
+echo "$apikey";
+echo "$apisecret";
 mysql_select_db('emotcha_db');
 $val = mysql_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
 
