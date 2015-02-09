@@ -5,10 +5,11 @@ $username = "root";
 $password = "limboda";
 
 
-if( $_GET["apikey"] || $_GET["apisecret"] )
-  {
-     echo "Welcome ". $_GET['apikey']. "<br />";
-     echo "You are ". $_GET['apisecret']. " years old.";
+if( !$_GET["apikey"] || !$_GET["apisecret"] )
+  {    
+  	 echo "<br>--missing appid or app secret--<br>"
+     // echo "<br>". $_GET['apikey']. "<br />";
+     // echo "-- ". $_GET['apisecret']. " --";
      
   }
 // Create connection
