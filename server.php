@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully";
 mysql_select_db('emotcha_db');
-$val = mysql_query('select * from `image_table`');
+$val = mysql_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
 
 while($row = mysql_fetch_array($val, MYSQL_ASSOC))
 {
