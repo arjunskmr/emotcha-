@@ -8,9 +8,8 @@ $password = "limboda";
 if( !$_GET["apikey"] || !$_GET["apisecret"] )
   {    
   	 echo "<br>--missing appid or app secret--<br>";
-     // echo "<br>". $_GET['apikey']. "<br />";
-     // echo "-- ". $_GET['apisecret']. " --";
-     
+      
+     exit();
   }
 // Create connection
 $conn = mysql_connect ($servername, $username, $password);
@@ -20,6 +19,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     
 } 
+echo "<br>". $_GET['apikey']. "<br />";
+echo "-- ". $_GET['apisecret']. " --";
 echo "Connected successfully";
 echo "$apikey";
 echo "$apisecret";
