@@ -37,11 +37,13 @@ $val = mysql_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
 
 while($row = mysql_fetch_array($val, MYSQL_ASSOC))
 {
-    echo "{$row['image_id']}  <br> ".
-         " {$row['image_link']} <br> ".
-         " {$row['emotion_id']} <br> ".
-         " {$row['emotion_name']} <br> ".
-         "--------------------------------<br>";
+    // echo "{$row['image_id']}  <br> ".
+    //      " {$row['image_link']} <br> ".
+    //      " {$row['emotion_id']} <br> ".
+    //      " {$row['emotion_name']} <br> ".
+    //      "--------------------------------<br>";
+    $r[]=$row;
+    print json_encode($r);
 } 
 echo "Fetched data successfully\n";
 
