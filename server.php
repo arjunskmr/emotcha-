@@ -43,10 +43,11 @@ while($row = mysql_fetch_array($val, MYSQL_ASSOC))
     //      " {$row['emotion_name']} <br> ".
     //      "--------------------------------<br>";
     $r[]=$row;
-    print json_encode($r);
+    
 } 
 // echo "Fetched data successfully\n";
-
+print json_encode($r[0]);
+print json_encode($r[1]);
 
 
 $conn->close();
