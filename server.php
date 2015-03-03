@@ -46,12 +46,9 @@ while($row = mysql_fetch_array($val, MYSQL_ASSOC))
     
 } 
 // echo "Fetched data successfully\n";
-<<<<<<< HEAD
+
 print json_encode($r[]);
-=======
-print json_encode($r[0]);echo '<br>';
-print json_encode($r[1]);
->>>>>>> 461214dba00cd9de6b2d0e90ed92f5b1a553a01e
+
 
 
 $conn->close();
