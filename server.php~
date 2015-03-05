@@ -45,9 +45,9 @@ while($row = mysql_fetch_array($val, MYSQL_ASSOC))
     $r[]=$row;
     
 } 
-// echo "Fetched data successfully\n";
+echo "Fetched data successfully\n";
 
-print json_encode($r[0]);
+print json_encode($r[]);
 
 
 
