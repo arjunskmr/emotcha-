@@ -66,7 +66,7 @@ echo json_encode(array(
     array('name' => 'emo_name', 'data' => $emo_name1),
     array('name' => 'emo_id', 'data' => $emo_id1),
     array('name' => 'image_id', 'data' => $image_id1),
-    array('name' => 'image_link', 'data' => $image_link1),
+    array('name' => 'image_link', 'data' => $image_link1)
 
 ));
 
