@@ -46,17 +46,17 @@ $val = mysql_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
     
 //} 
 $row = mysql_fetch_array($val, MYSQL_ASSOC);
-echo "Fetched data successfully\n";
+//echo "Fetched data successfully\n";
 
 //print json_encode($r[0]);
-$real = array_map(function($a) { return $a["emotion_name"]; }, $row);
-$orcamento = array_map(function($a) { return $a["emotion_id"]; }, $row);
-$desvio = array_map(function($a) { return $a["image_id"]; }, $row);
+$emo_name = array_map(function($a) { return $a["emotion_name"]; }, $row);
+$emo_id = array_map(function($a) { return $a["emotion_id"]; }, $row);
+$image_id = array_map(function($a) { return $a["image_id"]; }, $row);
 
 echo json_encode(array(
-    array('name' => 'orcamento', 'data' => $orcamento),
-    array('name' => 'real', 'data' => $real),
-    array('name' => 'desvio', 'data' => $desvio)
+    array('name' => 'emo_name', 'data' => $emo_name),
+    array('name' => 'emo_id', 'data' => $emo_id),
+    array('name' => 'image_id', 'data' => $image_id)
 ));
 
 
