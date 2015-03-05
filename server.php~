@@ -47,8 +47,16 @@ while($row = mysql_fetch_array($val, MYSQL_ASSOC))
 } 
 echo "Fetched data successfully\n";
 
-print json_encode($r[]);
+print json_encode($r[0]);
+$real = array_map(function($a) { return $a["emotion_name"]; }, $row);
+$orcamento = array_map(function($a) { return $a["emotion_id"]; }, $row);
+$desvio = array_map(function($a) { return $a["image_id"]; }, $row);
 
+echo json_encode(array(
+    array('name' => 'orcamento', 'data' => $orcamento),
+    array('name' => 'real', 'data' => $real),
+    array('name' => 'desvio', 'data' => $desvio)
+));
 
 
 $conn->close();
