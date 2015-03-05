@@ -35,19 +35,20 @@ if ($conn->connect_error) {
 mysql_select_db('emotcha_db');
 $val = mysql_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
 
-while($row = mysql_fetch_array($val, MYSQL_ASSOC))
-{
+//while($row = mysql_fetch_array($val, MYSQL_ASSOC))
+//{
     // echo "{$row['image_id']}  <br> ".
     //      " {$row['image_link']} <br> ".
     //      " {$row['emotion_id']} <br> ".
     //      " {$row['emotion_name']} <br> ".
     //      "--------------------------------<br>";
-    $r[]=$row;
+    //$r[]=$row;
     
-} 
+//} 
+$row = mysql_fetch_array($val, MYSQL_ASSOC);
 echo "Fetched data successfully\n";
 
-print json_encode($r[0]);
+//print json_encode($r[0]);
 $real = array_map(function($a) { return $a["emotion_name"]; }, $row);
 $orcamento = array_map(function($a) { return $a["emotion_id"]; }, $row);
 $desvio = array_map(function($a) { return $a["image_id"]; }, $row);
