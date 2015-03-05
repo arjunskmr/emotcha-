@@ -49,9 +49,9 @@ $row = mysql_fetch_array($val, MYSQL_ASSOC);
 //echo "Fetched data successfully\n";
 
 //print json_encode($r[0]);
-$emo_name = array_map(function($a) { return $a["emotion_name"]; }, $row);
-$emo_id = array_map(function($a) { return $a["emotion_id"]; }, $row);
-$image_id = array_map(function($a) { return $a["image_id"]; }, $row);
+$emo_name = array_map($row["emotion_name"]);
+$emo_id = array_map($row["emotion_id"]);
+$image_id = array_map($row["image_id"]);
 
 echo json_encode(array(
     array('name' => 'emo_name', 'data' => $emo_name),
