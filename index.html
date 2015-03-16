@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>emotcha</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>   
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>    
+<style>
+#captcha{
+    position: relative;
+    width: 410px;
+    height:280px;
+    background-image:url('pattern.png');
+    color:white;
+    
+    }
+#load{
+background-color: #2980b9;
+position: absolute;
+width: 410px;
+top:0px;
+height: 180px; 
+font-family: 'Open Sans', sans-serif;
+font-size: 20px; 
+padding-top: 100px;    
+display:none;    
+    
+}    
+#emo1{
+    position: absolute;
+    background-image:url('image/img_happy_face_baby_1426419352_101.jpg');
+    background-size: auto 100%;
+    width:90px;
+    height:90px;
+    border: 4px solid #2980b9;
+    border-radius: 50px;
+    left:10px;
+    }
+#emo2{
+    position: absolute;
+    background-image:url('image/img_happy_face_baby_1426419352_102.jpg');
+    background-size: auto 100%;
+    width:90px;
+    height:90px;
+    border: 4px solid #2980b9;
+    border-radius: 50px;
+    left:110px;
+    }
+#emo3{
+    position: absolute;
+    background-image:url('image/img_happy_face_baby_1426419352_103.jpg');
+    background-size: auto 100%;
+    width:90px;
+    height:90px;
+    border: 4px solid #2980b9;
+    border-radius: 50px;
+    left:210px;
+    }
+#emo4{
+    position: absolute;
+    background-image:url('image/img_happy_face_baby_1426419352_101.jpg');
+    background-size: auto 100%;
+    width:90px;
+    height:90px;
+    border: 4px solid #2980b9;
+    border-radius: 50px;
+    left: 310px;
+    }
+#title{
+    position: absolute;
+    background-color: #3498db;
+    width: 410px;
+    height: 80px;
+    bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    }  
+#txt{
+    padding-top: 20px;
+}
+
+span {
+	display: block; 
+	margin: 0 auto;
+}
+
+span[class*="l-"] {
+	height: 4px; width: 4px;
+	background: #000;
+	display: inline-block;
+	margin: 12px 2px;
+	
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	
+	-webkit-animation: loader 4s infinite;
+	-webkit-animation-timing-function: cubic-bezier(0.030, 0.615, 0.995, 0.415);
+	-webkit-animation-fill-mode: both;
+	-moz-animation: loader 4s infinite;
+	-moz-animation-timing-function: cubic-bezier(0.030, 0.615, 0.995, 0.415);
+	-moz-animation-fill-mode: both;
+	-ms-animation: loader 4s infinite;
+	-ms-animation-timing-function: cubic-bezier(0.030, 0.615, 0.995, 0.415);
+	-ms-animation-fill-mode: both;
+	animation: loader 4s infinite;
+	animation-timing-function: cubic-bezier(0.030, 0.615, 0.995, 0.415);
+	animation-fill-mode: both;
+}
+
+span.l-1 {-webkit-animation-delay: 1s;animation-delay: 1s;-ms-animation-delay: 1s;-moz-animation-delay: 1s;}
+span.l-2 {-webkit-animation-delay: 0.8s;animation-delay: 0.8s;-ms-animation-delay: 0.8s;-moz-animation-delay: 0.8s;}
+span.l-3 {-webkit-animation-delay: 0.6s;animation-delay: 0.6s;-ms-animation-delay: 0.6s;-moz-animation-delay: 0.6s;}
+span.l-4 {-webkit-animation-delay: 0.4s;animation-delay: 0.4s;-ms-animation-delay: 0.4s;-moz-animation-delay: 0.4s;}
+span.l-5 {-webkit-animation-delay: 0.2s;animation-delay: 0.2s;-ms-animation-delay: 0.2s;-moz-animation-delay: 0.2s;}
+span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-moz-animation-delay: 0;}
+
+@-webkit-keyframes loader {
+	0% {-webkit-transform: translateX(-30px); opacity: 0;}
+	25% {opacity: 1;}
+	50% {-webkit-transform: translateX(30px); opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@-moz-keyframes loader {
+	0% {-moz-transform: translateX(-30px); opacity: 0;}
+	25% {opacity: 1;}
+	50% {-moz-transform: translateX(30px); opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@-keyframes loader {
+	0% {-transform: translateX(-30px); opacity: 0;}
+	25% {opacity: 1;}
+	50% {-transform: translateX(30px); opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@-ms-keyframes loader {
+	0% {-ms-transform: translateX(-30px); opacity: 0;}
+	25% {opacity: 1;}
+	50% {-ms-transform: translateX(30px); opacity: 0;}
+	100% {opacity: 0;}
+}    
+</style>       
+</head>
+ 
+<body>
+<div id="captcha">
+<div id="emo1" class="pic"></div>
+<div id="emo2" class="pic"></div>
+<div id="emo3" class="pic"></div>
+<div id="emo4" class="pic"></div>
+<div id="load"><center>
+    <span>validating</span>
+<span class="l-1"></span>
+<span class="l-2"></span>
+<span class="l-3"></span>
+<span class="l-4"></span>
+<span class="l-5"></span>
+<span class="l-6"></span>
+    </center>
+</div>     
+    <div id="title"><center id="txt">CAPTCHA</center><img id="ref" width="40px" style="position:absolute;right:16px;top:19px;" src="refresh.png"/></div>    
+</div>
+<script>
+    var count=0;
+    var txt1="sad";
+    var txt2="dissap";
+    var txt3="happy";
+    var txt4="merassa";
+    var min = 0; 
+    var max = 100; 
+    var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random2 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random3 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    if(count==0){ $('#txt').text(txt1);}
+    
+ $('.pic').click(function(){
+    count++;
+     if(count==0){ $('#txt').text(txt1);}
+    else if(count==1){ $('#txt').text(txt2);}
+    else if(count==2){ $('#txt').text(txt3);}
+    else if(count==3){$('#txt').text(txt4); }
+    else if(count==4){$("#load").css("display", "block"); }
+    else{;} 
+   
+});
+
+ $("#emo1").css("top", random1+"px"); 
+ $("#emo2").css("top", random2+"px"); 
+ $("#emo3").css("top", random3+"px"); 
+ $("#emo4").css("top", random4+"px");     
+    
+$(document).ready(function()
+{
+    $("#ref").click(function() {
+        
+        //var id=$(this).attr(id);
+        $.ajax({
+        url : 'http://api.emotcha.tudlr.com/server.php?apikey=asdasd&apisecret=asdasdasd',
+        type:'GET',
+        dataType: 'textp',
+        context: this,
+        success: function(values){
+            $('#txt').html(values);
+        },
+        error: function(){
+        alert('failure');
+        }
+    });
+});
+});
+    
+</script>    
+</body>
+
+</html>
