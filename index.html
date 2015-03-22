@@ -163,6 +163,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 </div>     
     <div id="title"><center id="txt">CAPTCHA</center><img id="ref" width="40px" style="position:absolute;right:16px;top:19px;" src="refresh.png"/></div>    
 </div>
+<div id="asd"></div>
 <script>
     var count=0;
     var txt1="sad";
@@ -204,7 +205,7 @@ $(document).ready(function()
         dataType: 'text',
         
         success: function(values){
-            $('#txt').html(values);
+            $('#asd').html(values);
         },
         error: function(){
         alert('failure');
