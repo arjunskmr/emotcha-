@@ -32,7 +32,7 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
 // echo "$apikey";
 // echo "$apisecret";
 
-$val = mysqli_query('select * from `image_table` ORDER BY RAND() LIMIT 2');
+$val = mysqli_query($conn, 'select * from `image_table` ORDER BY RAND() LIMIT 2');
 
 while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
 {
