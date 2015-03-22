@@ -200,9 +200,9 @@ $(document).ready(function()
         //var id=$(this).attr(id);
         $.ajax({
         url : 'server.php?apikey=asdasd&apisecret=asdasdasd',
-        type:'POST',
+     
         dataType: 'text',
-        context: this,
+        
         success: function(values){
             $('#txt').html(values);
         },
