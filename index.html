@@ -224,19 +224,19 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
      
      }
     else if(count==1){ $('#txt').text(txt2);
-    click1=$(this).html();	
+    click1=$(this).children().html();	
     alert(click1+txt1);
     }
     else if(count==2){ $('#txt').text(txt3);
-    click2=$(this).html();
+    click2=$(this).children().html();
     alert(click2+txt2);
     }
     else if(count==3){$('#txt').text(txt4); 
-     click3=$(this).html();	
+     click3=$(this).children().html();	
      alert(click3+txt3);
     }
     else if(count==4){$("#load").css("display", "block"); 
-       click4=$(this).html(); 
+       click4=$(this).children().html(); 
        alert(click4+txt4);
          
          var objt={txt1 : txt1, id1 : click1, txt2 : txt2, id2 : click2, txt3 : txt3, id3 : click3, txt4 : txt4, id4 : click4 };
