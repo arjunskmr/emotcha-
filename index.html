@@ -165,22 +165,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 </div>
 <div id="asd"></div>
 <script>
-    var count=0;
     
-    var min = 0; 
-    var max = 100; 
-    var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
-    var random2 = Math.floor(Math.random() * (max - min + 1)) + min; 
-    var random3 = Math.floor(Math.random() * (max - min + 1)) + min; 
-    var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
-    if(count==0){ $('#txt').text(txt1);}
-    
- 
-
- $("#emo1").css("top", random1+"px"); 
- $("#emo2").css("top", random2+"px"); 
- $("#emo3").css("top", random3+"px"); 
- $("#emo4").css("top", random4+"px");     
     
 $(document).ready(function()
 {
@@ -195,7 +180,15 @@ $(document).ready(function()
         success: function(values){
             $('#asd').html(values);
             var obj = JSON.parse(values);
-            $('.pic').click(function(){
+           
+        },
+        error: function(){
+        alert('failure');
+        }
+    });
+});
+var count=0;
+     $('.pic').click(function(){
     count++;
      if(count==0){ $('#txt').text(obj.emo_name);}
     else if(count==1){ $('#txt').text(obj.emo_name2);}
@@ -205,12 +198,20 @@ $(document).ready(function()
     else{;} 
    
 });
-        },
-        error: function(){
-        alert('failure');
-        }
-    });
-});
+    var min = 0; 
+    var max = 100; 
+    var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random2 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random3 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    if(count==0){ $('#txt').text(txt1);}
+    
+ 
+
+ $("#emo1").css("top", random1+"px"); 
+ $("#emo2").css("top", random2+"px"); 
+ $("#emo3").css("top", random3+"px"); 
+ $("#emo4").css("top", random4+"px");     
 });
     
 </script>    
