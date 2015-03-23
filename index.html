@@ -166,10 +166,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 <div id="asd"></div>
 <script>
     var count=0;
-    var txt1="sad";
-    var txt2="dissap";
-    var txt3="happy";
-    var txt4="merassa";
+    
     var min = 0; 
     var max = 100; 
     var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -178,16 +175,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
     if(count==0){ $('#txt').text(txt1);}
     
- $('.pic').click(function(){
-    count++;
-     if(count==0){ $('#txt').text(txt1);}
-    else if(count==1){ $('#txt').text(txt2);}
-    else if(count==2){ $('#txt').text(txt3);}
-    else if(count==3){$('#txt').text(txt4); }
-    else if(count==4){$("#load").css("display", "block"); }
-    else{;} 
-   
-});
+ 
 
  $("#emo1").css("top", random1+"px"); 
  $("#emo2").css("top", random2+"px"); 
@@ -207,7 +195,16 @@ $(document).ready(function()
         success: function(values){
             $('#asd').html(values);
             var obj = JSON.parse(values);
-            alert(obj.emo_name);
+            $('.pic').click(function(){
+    count++;
+     if(count==0){ $('#txt').text(obj.emo_name);}
+    else if(count==1){ $('#txt').text(obj.emo_name2);}
+    else if(count==2){ $('#txt').text(obj.emo_name3);}
+    else if(count==3){$('#txt').text(obj.emo_name4); }
+    else if(count==4){$("#load").css("display", "block"); }
+    else{;} 
+   
+});
         },
         error: function(){
         alert('failure');
