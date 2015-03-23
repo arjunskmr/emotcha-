@@ -37,7 +37,7 @@ $count=0;
     }
     $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
-    {print_r("success");}
+    {header("Location: http://google.com");}
     
     if($count!=0)
     {print_r("faliure");}
