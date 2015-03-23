@@ -206,6 +206,8 @@ $(document).ready(function()
         
         success: function(values){
             $('#asd').html(values);
+            var obj = JSON.parse(values);
+            alert(obj.emo_name);
         },
         error: function(){
         alert('failure');
