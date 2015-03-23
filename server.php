@@ -44,7 +44,7 @@ while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
     $r[]=$row;
     
 } 
-$my_array = array("0","1","2","3","4");
+$my_array = array(0,1,2,3);
 
 shuffle($my_array);
 
@@ -67,10 +67,10 @@ $emo_name3 =$r[$my_array[3]]["emotion_name"];
 $emo_id3 = $r[3]["emotion_id"];
 $image_id3 = $r[3]["image_id"];
 $image_link3 = $r[3]["image_link"];
-mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id','$r[0]["emotion_name"]');");
-mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id1','$r[1]["emotion_name"]');");
-mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id2','$r[2]["emotion_name"]');");
-mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id3','$r[3]["emotion_name"]');");
+mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id','$r[0]['emotion_name']');");
+mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id1','$r[1]['emotion_name']');");
+mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id2','$r[2]['emotion_name]');");
+mysqli_query($conn, "INSERT INTO active_table VALUES ('session101','$image_id3','$r[3]['emotion_name']');");
 echo json_encode(array('emo_name' => $emo_name , 'emo_id' => $emo_id , 'image_id' => $image_id , 'image_link' => $image_link , 'emo_name1' => $emo_name1 , 'emo_id1' => $emo_id1 , 'image_id1' => $image_id1 , 'image_link1' => $image_link1 , 'emo_name2' => $emo_name2 , 'emo_id2' => $emo_id2 , 'image_id2' => $image_id2 , 'image_link2' => $image_link2 ,'emo_name3' => $emo_name3 , 'emo_id3' => $emo_id3 , 'image_id3' => $image_id3 , 'image_link3' => $image_link3));
 
 
