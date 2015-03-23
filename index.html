@@ -233,7 +233,21 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
          click4=$('#emot4').html();
          
          var objt={txt1 : txt1, id1 : click1, txt2 : txt2, id2 : click2, txt3 : txt3, id3 : click3, txt4 : txt4, id4 : click4 };
-       alert(JSON.stringify(objt));
+        var objt_i=JSON.stringify(objt);
+        $.ajax({
+    type: 'POST',
+    url: 'json_handle.php',
+    data: {json: objt_i},
+    dataType: 'json'
+   })
+.done( function( data ) {
+    console.log('done');
+    console.log(data);
+})
+.fail( function( data ) {
+    console.log('fail');
+    console.log(data);
+});
     }
     else{;} 
    
