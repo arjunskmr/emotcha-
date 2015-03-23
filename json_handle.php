@@ -54,7 +54,7 @@ $count=0;
         
         $count++;
     }
-    
+    $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
     {print_r("success");}
     
