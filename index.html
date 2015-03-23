@@ -218,19 +218,19 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
  $('.pic').click(function(){
     count++;
      if(count==0){ $('#txt').text(txt1);
-     
+     click1=$('#emot1').html();
      }
     else if(count==1){ $('#txt').text(txt2);
-    	click1=$('#emot1').html();
+    click2=$('#emot2').html();	
     }
     else if(count==2){ $('#txt').text(txt3);
-    	click2=$('#emot2').html();
+    click3=$('#emot3').html();	
     }
     else if(count==3){$('#txt').text(txt4); 
-    	click3=$('#emot3').html();
+     click4=$('#emot4').html();	
     }
     else if(count==4){$("#load").css("display", "block"); 
-         click4=$('#emot4').html();
+        
          
          var objt={txt1 : txt1, id1 : click1, txt2 : txt2, id2 : click2, txt3 : txt3, id3 : click3, txt4 : txt4, id4 : click4 };
         var objt_i=JSON.stringify(objt);
