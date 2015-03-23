@@ -6,7 +6,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>   
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>    
 <style>
-.pic{visibility:hidden;}
+.picer{visibility:hidden;}
 #captcha{
     position: relative;
     width: 410px;
@@ -141,10 +141,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
  
 <body>
 <div id="captcha">
-<div id="emo1" class="pic"></div>
-<div id="emo2" class="pic"></div>
-<div id="emo3" class="pic"></div>
-<div id="emo4" class="pic"></div>
+<div id="emo1" class="pic"><div id="emot1" class="picker"></div></div>
+<div id="emo2" class="pic"><div id="emot2" class="picker"></div></div>
+<div id="emo3" class="pic"><div id="emot3" class="picker"></div></div>
+<div id="emo4" class="pic"><div id="emot4" class="picker"></div></div>
 <div id="load"><center>
     <span>validating</span>
 <span class="l-1"></span>
@@ -189,10 +189,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
             var emo2=obj.emo_id1;
             var emo3=obj.emo_id2;
             var emo4=obj.emo_id3;
-            $('#emo1').text(emo1);
-            $('#emo2').text(emo2);
-            $('#emo3').text(emo3);
-            $('#emo4').text(emo4);
+            $('#emot1').text(emo1);
+            $('#emot2').text(emo2);
+            $('#emot3').text(emo3);
+            $('#emot4').text(emo4);
              var count=0;
     
     var min = 0; 
