@@ -214,14 +214,25 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     var random3 = Math.floor(Math.random() * (max - min + 1)) + min; 
     var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
     if(count==0){ $('#txt').text(txt1);}
-    
+ var click1,click2,click3,click4;   
  $('.pic').click(function(){
     count++;
-     if(count==0){ $('#txt').text(txt1);}
-    else if(count==1){ $('#txt').text(txt2);}
-    else if(count==2){ $('#txt').text(txt3);}
-    else if(count==3){$('#txt').text(txt4); }
-    else if(count==4){$("#load").css("display", "block"); }
+     if(count==0){ $('#txt').text(txt1);
+     
+     }
+    else if(count==1){ $('#txt').text(txt2);
+    	click1=$('#emot1').html;
+    }
+    else if(count==2){ $('#txt').text(txt3);
+    	click2=$('#emot2').html;
+    }
+    else if(count==3){$('#txt').text(txt4); 
+    	click3=$('#emot3').html;
+    }
+    else if(count==4){$("#load").css("display", "block"); 
+         click4=$('#emot4').html;
+         alert(click1+click2+click3+click4);
+    }
     else{;} 
    
 });
