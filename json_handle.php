@@ -18,19 +18,36 @@ $count=0;
         $posted_data = json_decode($_POST['json'], true);
     }
     if($r[0]["image_id"]==$posted_data["id1"]&&$r[0]["emotion_id"]!=$posted_data["txt1"])
-    {
+    {  echo $r[0]["image_id"];
+    echo $posted_data["id1"];
+    echo $r[0]["emotion_id"];
+    echo $posted_data["txt1"];
+    echo '<bR>';
         $count++;
     }
      if($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"])
-    {
+    {echo $r[1]["image_id"];
+    echo $posted_data["id2"];
+    echo $r[1]["emotion_id"];
+    echo $posted_data["txt2"];
+    echo '<bR>';
         $count++;
     }
      if($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"])
-    {
+    {echo $r[2]["image_id"];
+    echo $posted_data["id3"];
+    echo $r[2]["emotion_id"];
+    echo $posted_data["txt3"];
+    echo '<bR>';
         $count++;
     }
      if($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])
     {
+        echo $r[3]["image_id"];
+    echo $posted_data["id4"];
+    echo $r[3]["emotion_id"];
+    echo $posted_data["txt4"];
+    echo '<bR>';
         $count++;
     }
     
