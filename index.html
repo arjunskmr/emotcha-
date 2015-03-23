@@ -238,10 +238,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     type: 'POST',
     url: 'json_handle.php',
     data: {json: objt_i},
-    dataType: 'json'
+    dataType: 'text'
    })
 .done( function( data ) {
-    console.log('done');
+    alert('done');
     console.log(data);
 })
 .fail( function( data ) {
