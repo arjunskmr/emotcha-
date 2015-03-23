@@ -215,12 +215,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
     if(count==0){ $('#txt').text(txt1);}
  var click1,click2,click3,click4;   
- $(document.body).click(function(evt){
-  var clicked = evt.target;
-  var currentID = clicked.id;
- 
-})
+
  $('.pic').click(function(){
+ var clicked = evt.target;
+  var currentID = clicked.id;
     count++;
      if(count==0){ $('#txt').text(txt1);
      
