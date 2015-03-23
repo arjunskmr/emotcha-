@@ -16,6 +16,8 @@ $count=0;
     $posted_data = array();
     if (!empty($_POST['json'])) {
         $posted_data = json_decode($_POST['json'], true);
+          echo $posted_data;
+          
         echo $r[0]["image_id"];
     echo $posted_data["id1"];
     echo $r[0]["emotion_id"];
