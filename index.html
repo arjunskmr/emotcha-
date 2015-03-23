@@ -171,7 +171,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
         success: function(values){
             $('#asd').html(values);
             var obj = JSON.parse(values);
-            
+            var txt1=obj.emo_name;
+            var txt2=obj.emo_name1;
+            var txt3=obj.emo_name2;
+            var txt4=obj.emo_name3;
             
         },
         error: function(){
