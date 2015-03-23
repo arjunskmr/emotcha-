@@ -4,4 +4,5 @@
         $posted_data = json_decode($_POST['json'], true);
     }
     print_r($posted_data);
+    print_r("hello");
 ?>
