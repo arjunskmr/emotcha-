@@ -32,7 +32,7 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
 // echo "$apikey";
 // echo "$apisecret";
 
-$val = mysqli_query($conn, 'select * from `image_table` ORDER BY RAND() LIMIT 2');
+$val = mysqli_query($conn, 'select * from `image_table` ORDER BY RAND() LIMIT 4');
 
 while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
 {
@@ -56,8 +56,16 @@ $emo_name1 =$r[1]["emotion_name"];
 $emo_id1 = $r[1]["emotion_id"];
 $image_id1 = $r[1]["image_id"];
 $image_link1 = $r[1]["image_link"];
+$emo_name2 =$r[2]["emotion_name"];
+$emo_id2 = $r[2]["emotion_id"];
+$image_id2 = $r[2]["image_id"];
+$image_link2 = $r[2]["image_link"];
+$emo_name3 =$r[3]["emotion_name"];
+$emo_id3 = $r[3]["emotion_id"];
+$image_id3 = $r[3]["image_id"];
+$image_link3 = $r[3]["image_link"];
 
-echo json_encode(array('emo_name' => $emo_name , 'emo_id' => $emo_id , 'image_id' => $image_id , 'image_link' => $image_link , 'emo_name1' => $emo_name1 , 'emo_id1' => $emo_id1 , 'image_id1' => $image_id1 , 'image_link1' => $image_link1));
+echo json_encode(array('emo_name' => $emo_name , 'emo_id' => $emo_id , 'image_id' => $image_id , 'image_link' => $image_link , 'emo_name1' => $emo_name1 , 'emo_id1' => $emo_id1 , 'image_id1' => $image_id1 , 'image_link1' => $image_link1 , 'emo_name2' => $emo_name2 , 'emo_id2' => $emo_id2 , 'image_id2' => $image_id2 , 'image_link2' => $image_link2 ,'emo_name3' => $emo_name3 , 'emo_id3' => $emo_id3 , 'image_id3' => $image_id3 , 'image_link3' => $image_link3));
 
 
 $conn->close();
