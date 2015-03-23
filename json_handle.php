@@ -37,7 +37,7 @@ $count=0;
     }
     $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
-    {header("Location: http://google.com");}
+    {print_r("http://54.186.63.237/emotcha-/bypass.html");}
     
     if($count!=0)
     {print_r("faliure");}
