@@ -44,7 +44,10 @@ while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
     $r[]=$row;
     
 } 
+$my_array = array("0","1","2","3","4");
 
+shuffle($my_array);
+print_r($my_array);
 //echo "Fetched data successfully\n";
 
 //print json_encode($r[0]);
