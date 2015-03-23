@@ -57,17 +57,7 @@ $emo_id1 = $r[1]["emotion_id"];
 $image_id1 = $r[1]["image_id"];
 $image_link1 = $r[1]["image_link"];
 
-echo json_encode(array(
-    array('name' => 'emo_name', 'data' => $emo_name),
-    array('name' => 'emo_id', 'data' => $emo_id),
-    array('name' => 'image_id', 'data' => $image_id),
-    array('name' => 'image_link', 'data' => $image_link),
-    array('name' => 'emo_name', 'data' => $emo_name1),
-    array('name' => 'emo_id', 'data' => $emo_id1),
-    array('name' => 'image_id', 'data' => $image_id1),
-    array('name' => 'image_link', 'data' => $image_link1)
-
-));
+echo json_encode(array('emo_name' => $emo_name , 'emo_id' => $emo_id , 'image_id' => $image_id , 'image_link' => $image_link , 'emo_name1' => $emo_name1 , 'emo_id1' => $emo_id1 , 'image_id1' => $image_id1 , 'image_link1' => $image_link1));
 
 
 $conn->close();
