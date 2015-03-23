@@ -248,12 +248,19 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     dataType: 'text'
    })
 .done( function( data ) {
+    if(data!="failure")
+    {
     window.location=data;
-})
-.fail( function( data ) {
-   $('#load').text("failed! please retry..");	
+    }
+    else{
+    	$('#load').text("failed! please retry..");	
     $("#ref").click(function() {
     window.location="http://54.186.63.237/emotcha-/index.html";	
+    	
+    }
+})
+.fail( function( data ) {
+   
     
     });
 });
