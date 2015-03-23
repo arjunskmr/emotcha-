@@ -78,12 +78,10 @@ display:none;
 #txt{
     padding-top: 20px;
 }
-
 span {
 	display: block; 
 	margin: 0 auto;
 }
-
 span[class*="l-"] {
 	height: 4px; width: 4px;
 	background: #000;
@@ -107,35 +105,30 @@ span[class*="l-"] {
 	animation-timing-function: cubic-bezier(0.030, 0.615, 0.995, 0.415);
 	animation-fill-mode: both;
 }
-
 span.l-1 {-webkit-animation-delay: 1s;animation-delay: 1s;-ms-animation-delay: 1s;-moz-animation-delay: 1s;}
 span.l-2 {-webkit-animation-delay: 0.8s;animation-delay: 0.8s;-ms-animation-delay: 0.8s;-moz-animation-delay: 0.8s;}
 span.l-3 {-webkit-animation-delay: 0.6s;animation-delay: 0.6s;-ms-animation-delay: 0.6s;-moz-animation-delay: 0.6s;}
 span.l-4 {-webkit-animation-delay: 0.4s;animation-delay: 0.4s;-ms-animation-delay: 0.4s;-moz-animation-delay: 0.4s;}
 span.l-5 {-webkit-animation-delay: 0.2s;animation-delay: 0.2s;-ms-animation-delay: 0.2s;-moz-animation-delay: 0.2s;}
 span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-moz-animation-delay: 0;}
-
 @-webkit-keyframes loader {
 	0% {-webkit-transform: translateX(-30px); opacity: 0;}
 	25% {opacity: 1;}
 	50% {-webkit-transform: translateX(30px); opacity: 0;}
 	100% {opacity: 0;}
 }
-
 @-moz-keyframes loader {
 	0% {-moz-transform: translateX(-30px); opacity: 0;}
 	25% {opacity: 1;}
 	50% {-moz-transform: translateX(30px); opacity: 0;}
 	100% {opacity: 0;}
 }
-
 @-keyframes loader {
 	0% {-transform: translateX(-30px); opacity: 0;}
 	25% {opacity: 1;}
 	50% {-transform: translateX(30px); opacity: 0;}
 	100% {opacity: 0;}
 }
-
 @-ms-keyframes loader {
 	0% {-ms-transform: translateX(-30px); opacity: 0;}
 	25% {opacity: 1;}
@@ -165,11 +158,9 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 </div>
 <div id="asd"></div>
 <script>
-    
-    
-$(document).ready(function()
+    $(document).ready(function()
 {
-    $("#ref").click(function() {
+    
         
         //var id=$(this).attr(id);
         $.ajax({
@@ -180,24 +171,20 @@ $(document).ready(function()
         success: function(values){
             $('#asd').html(values);
             var obj = JSON.parse(values);
-           
+            
+            var txt1=obj.emo_name;
+            var txt2=obj.emo_name1;
+            var txt3=obj.emo_name2;
+            var txt4=obj.emo_name3;
         },
         error: function(){
         alert('failure');
         }
     });
+
 });
-var count=0;
-     $('.pic').click(function(){
-    count++;
-     if(count==0){ $('#txt').text(obj.emo_name);}
-    else if(count==1){ $('#txt').text(obj.emo_name2);}
-    else if(count==2){ $('#txt').text(obj.emo_name3);}
-    else if(count==3){$('#txt').text(obj.emo_name4); }
-    else if(count==4){$("#load").css("display", "block"); }
-    else{;} 
-   
-});
+    var count=0;
+    
     var min = 0; 
     var max = 100; 
     var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -206,13 +193,22 @@ var count=0;
     var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
     if(count==0){ $('#txt').text(txt1);}
     
- 
-
+ $('.pic').click(function(){
+    count++;
+     if(count==0){ $('#txt').text(txt1);}
+    else if(count==1){ $('#txt').text(txt2);}
+    else if(count==2){ $('#txt').text(txt3);}
+    else if(count==3){$('#txt').text(txt4); }
+    else if(count==4){$("#load").css("display", "block"); }
+    else{;} 
+   
+});
  $("#emo1").css("top", random1+"px"); 
  $("#emo2").css("top", random2+"px"); 
  $("#emo3").css("top", random3+"px"); 
  $("#emo4").css("top", random4+"px");     
-});
+    
+
     
 </script>    
 </body>
