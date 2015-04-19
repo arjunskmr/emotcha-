@@ -635,8 +635,11 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
   alert(data);
     if(data!="faliure")
     {
+      $(".button").click(function(){
+       
     window.location=data;
 
+    });
     }
     else{
       $('#load').html("<center>failed! please retry..</center>");
