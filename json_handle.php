@@ -45,23 +45,23 @@ $count=0;
             {
                 if($r[$i]["image_id"]==$posted_data["id1"])
                 $coun++;
-                break;
+                continue;
             }
 
         if($r[$i]["emotion_id"]==$posted_data["txt2"])
             {if($r[$i]["image_id"]==$posted_data["id2"])
                 $coun++;
-                break;
+                continue;
             }
         if($r[$i]["emotion_id"]==$posted_data["txt3"])
             {if($r[$i]["image_id"]==$posted_data["id3"])
                 $coun++;
-                break;
+                continue;
             }
         if($r[$i]["emotion_id"]==$posted_data["txt4"])
             {if($r[$i]["image_id"]==$posted_data["id4"])
                 $coun++;
-                break;
+                continue;
             }
         }
         if($coun==4)
