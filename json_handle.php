@@ -22,6 +22,22 @@ $count=0;
     {  
         $count++;
     }
+     if($r[0]["emotion_id"]!=$posted_data["txt1"])
+    {  
+        $count++;
+    }
+     if($r[1]["emotion_id"]!=$posted_data["txt2"])
+    {  
+        $count++;
+    }
+     if($r[2]["emotion_id"]!=$posted_data["txt3"])
+    {  
+        $count++;
+    }
+    if($r[3]["emotion_id"]!=$posted_data["txt4"])
+    {  
+        $count++;
+    }
     if($r[0]["image_id"]!=$posted_data["id1"])
     {  
         $count++;
