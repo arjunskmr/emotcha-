@@ -38,22 +38,7 @@ $count=0;
     {  
         $count++;
     }
-    if($r[0]["image_id"]!=$posted_data["id1"])
-    {  
-        $count++;
-    }
-
-    if($r[1]["image_id"]!=$posted_data["id2"])
-    {  
-        $count++;
-    }if($r[2]["image_id"]!=$posted_data["id3"])
-    {  
-        $count++;
-    }
-    if($r[3]["image_id"]!=$posted_data["id4"])
-    {  
-        $count++;
-    }
+    
     
     $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
