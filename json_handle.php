@@ -65,11 +65,12 @@ $count=0;
             }
         }
         if($coun==4)
-        {
+        { print_r($coun)
           print_r("success");  
         }
         else{
-            printr("fail");
+            print_r($coun)
+            print_r("fail");
         }
 
 
