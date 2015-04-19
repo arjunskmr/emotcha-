@@ -65,12 +65,12 @@ $count=0;
             }
         }
         if($coun==4)
-        { print_r($coun);
-          print_r("success");  
+        { 
+          print_r("http://54.186.63.237/emotcha-/bypass.html");  
         }
         else{
-            print_r($coun);
-            print_r("fail");
+            
+            print_r("faliure");
         }
 
 
