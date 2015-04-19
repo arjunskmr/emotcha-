@@ -553,9 +553,11 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
             var link2="";
             var link3="";
             var link4="";
+            var cn=0;
             
     $(document).ready(function()
 {     reload(); 
+
      //$("#ref").click(function() {
         function reload(){
         //var id=$(this).attr(id);
@@ -648,6 +650,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     $("#ref").click(function() {
       $('#load').hide();
       //reload();
+      cn++;
 
     // window.location="http://54.186.63.237/emotcha-/sample.html"; 
       
@@ -675,7 +678,8 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 }
 
 });
-     
+    if(cn==1)
+    {reload();} 
    
 
     
