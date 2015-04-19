@@ -15,7 +15,7 @@ $count=0;
   
     $posted_data = array();
     
-    
+
 
     if (!empty($_POST['json'])) {
         $posted_data = json_decode($_POST['json'], true);
@@ -43,6 +43,6 @@ $count=0;
     {print_r("http://54.186.63.237/emotcha-/bypass.html");}
     
     if($count!=0)
-    {print_r("faliure");}
+    {print_r($count);}
     
 ?>
