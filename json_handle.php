@@ -18,7 +18,7 @@ $count=0;
         $posted_data = json_decode($_POST['json'], true);
        
     }
-    if((r[0]["emotion_id"]==$posted_data["txt1"])&&(r[1]["emotion_id"]==$posted_data["txt2"])&&(r[2]["emotion_id"]==$posted_data["txt3"])&&(r[3]["emotion_id"]==$posted_data["txt4"]))
+    if(($r[0]["emotion_id"]==$posted_data["txt1"])&&($r[1]["emotion_id"]==$posted_data["txt2"])&&($r[2]["emotion_id"]==$posted_data["txt3"])&&($r[3]["emotion_id"]==$posted_data["txt4"]))
     {
         print_r("success");
         die();
