@@ -561,6 +561,8 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
      //$("#ref").click(function() {
         function reload(){
         //var id=$(this).attr(id);
+     
+        [lbl] start:
         $.ajax({
         url : 'server.php?apikey=asdasd&apisecret=asdasdasd',
      
@@ -650,9 +652,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     $("#ref").click(function() {
       $('#load').hide();
       //reload();
-      cn++;
-      if(cn==1)
-    {reload();} 
+      [lbl] repeat: goto start;
     // window.location="http://54.186.63.237/emotcha-/sample.html"; 
       
     })
