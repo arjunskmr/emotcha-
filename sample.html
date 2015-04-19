@@ -618,7 +618,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
    
     }
     else if(count==4){
-    $(".button").click(function(){
+    
       $("#load").css("display", "block"); 
        click4=$(this).children().html(); 
       
@@ -634,7 +634,9 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 .done( function( data ) {
     if(data!="faliure")
     {
+      $("#element").click(function(){
     window.location=data;
+    });
     }
     else{
       $('#load').html("<center>failed! please retry..</center>");
@@ -652,7 +654,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 });
     }
     else{;} 
- });  
+   
 });
  $("#emo1").css("top", random1+"px"); 
  $("#emo2").css("top", random2+"px"); 
