@@ -634,8 +634,10 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 .done( function( data ) {
     if(data!="faliure")
     {
-      $("#element").click(function(){
+      $(".button").click(function(){
+        alert(data);
     window.location=data;
+
     });
     }
     else{
