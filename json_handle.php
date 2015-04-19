@@ -22,24 +22,7 @@ $count=0;
     {  
         $count++;
     }
-     else if($r[0]["emotion_id"]!=$posted_data["txt1"])
-    {  
-        $count++;
-    }
-     else if($r[1]["emotion_id"]!=$posted_data["txt2"])
-    {  
-        $count++;
-    }
-     else if($r[2]["emotion_id"]!=$posted_data["txt3"])
-    {  
-        $count++;
-    }
-    else if($r[3]["emotion_id"]!=$posted_data["txt4"])
-    {  
-        $count++;
-    }
-    
-    else {;}
+     
     $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
     {print_r("http://54.186.63.237/emotcha-/bypass.html");}
