@@ -39,7 +39,7 @@ $count=0;
         $count++;
     }
     
-    else {;}
+    else {;;}
     $val1 = mysqli_query($conn, 'delete from `active_table`');
     if($count==0)
     {print_r("http://54.186.63.237/emotcha-/bypass.html");}
