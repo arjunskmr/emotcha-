@@ -21,7 +21,7 @@ $count=0;
     if((r[0]["emotion_id"]==$posted_data["txt1"])&&(r[1]["emotion_id"]==$posted_data["txt2"])&&(r[2]["emotion_id"]==$posted_data["txt3"])&&(r[3]["emotion_id"]==$posted_data["txt4"]))
     {
         print_r("success");
-        die;
+        die();
     }
     else{
      print_r("faliure");
