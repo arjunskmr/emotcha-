@@ -18,16 +18,24 @@ $count=0;
         $posted_data = json_decode($_POST['json'], true);
        
     }
-    if(($r[0]["image_id"]==$posted_data["id1"]&&$r[0]["emotion_id"]!=$posted_data["txt1"])||(($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"]))||(($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"]))||(($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])))
-    {  
-        $count++;
+    if((r[0]["emotion_id"]==$posted_data["txt1"])&&(r[1]["emotion_id"]==$posted_data["txt2"])&&(r[2]["emotion_id"]==$posted_data["txt3"])&&(r[3]["emotion_id"]==$posted_data["txt4"]))
+    {
+        print_r("success");
+        die;
     }
+    else{
+     print_r("faliure");
+    }
+    // if(($r[0]["image_id"]==$posted_data["id1"]&&$r[0]["emotion_id"]!=$posted_data["txt1"])||(($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"]))||(($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"]))||(($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])))
+    // {  
+    //     $count++;
+    // }
      
-    $val1 = mysqli_query($conn, 'delete from `active_table`');
-    if($count==0)
-    {print_r($r[3]["emotion_id"]);}
+    // $val1 = mysqli_query($conn, 'delete from `active_table`');
+    // if($count==0)
+    // {print_r($r[3]["emotion_id"]);}
     
-    if($count!=0)
-    {print_r("faliure");}
+    // if($count!=0)
+    // {print_r("faliure");}
     
 ?>
