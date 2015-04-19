@@ -557,7 +557,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     $(document).ready(function()
 {
      //$("#ref").click(function() {
-        
+        function reload(){
         //var id=$(this).attr(id);
         $.ajax({
         url : 'server.php?apikey=asdasd&apisecret=asdasdasd',
@@ -646,7 +646,8 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
       $('#load').html("<center>failed! please retry..</center>");
       $('#txt').text("RETRY");
     $("#ref").click(function() {
-    window.location="http://54.186.63.237/emotcha-/sample.html"; 
+      reload();
+    // window.location="http://54.186.63.237/emotcha-/sample.html"; 
       
     })
     }
@@ -669,7 +670,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
         // alert('failure');
         }
     });
-//});
+});
 });
      
     
