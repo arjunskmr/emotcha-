@@ -14,24 +14,6 @@ while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
 $count=0;
   
     $posted_data = array();
-     print_r($r[0]["image_id"]);
-print_r($posted_data["id1"];
-print_r($r[0]["emotion_id"];
-print_r(posted_data["txt1"];
-print_r($r[1]["image_id"];
-print_r($posted_data["id2"];
-print_r($r[1]["emotion_id"];
-print_r(posted_data["txt2"];
-print_r($r[2]["image_id"];
-print_r($posted_data["id3"];
-print_r($r[2]["emotion_id"];
-print_r(posted_data["txt4"];
-print_r($r[3]["image_id"];
- print_r($posted_data["id4"];
-print_r($r[4]["emotion_id"];
-print_r(posted_data["txt4"];
-
-
     if (!empty($_POST['json'])) {
         $posted_data = json_decode($_POST['json'], true);
        
@@ -41,11 +23,11 @@ print_r(posted_data["txt4"];
         $count++;
     }
      if($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"])
-    {   
+    {
         $count++;
     }
      if($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"])
-    {  
+    {
         $count++;
     }
      if($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])
