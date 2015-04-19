@@ -617,7 +617,9 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
      click3=$(this).children().html();  
    
     }
-    else if(count==4){$("#load").css("display", "block"); 
+    else if(count==4){
+    $("#element").click(function(){
+      $("#load").css("display", "block"); 
        click4=$(this).children().html(); 
       
          
@@ -650,7 +652,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 });
     }
     else{;} 
-   
+ });  
 });
  $("#emo1").css("top", random1+"px"); 
  $("#emo2").css("top", random2+"px"); 
