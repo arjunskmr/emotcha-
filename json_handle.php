@@ -43,6 +43,6 @@ $count=0;
     {print_r("http://54.186.63.237/emotcha-/bypass.html");}
     
     if($count!=0)
-    {print_r("faliure")}
+    {print_r("faliure");}
     
 ?>
