@@ -9,12 +9,12 @@ $val = mysqli_query($conn, 'select * from `active_table`');
 while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
 {
     $r[]=$row;
-    echo $r;
+   
 } 
 $count=0;
   
     $posted_data = array();
-    echo $posted_data ;
+  
 
     if (!empty($_POST['json'])) {
         $posted_data = json_decode($_POST['json'], true);
