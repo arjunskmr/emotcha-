@@ -25,6 +25,14 @@ $count=0;
     }
     else{
      print_r("faliure");
+     print_r($r[0]["emotion_id"]);
+     print_r($r[1]["emotion_id"]);
+     print_r($r[2]["emotion_id"]);
+     print_r($r[3]["emotion_id"]);
+     print_r($posted_data["txt1"]);
+     print_r($posted_data["txt2"]);
+     print_r($posted_data["txt3"]);
+     print_r($posted_data["txt4"]);
     }
     // if(($r[0]["image_id"]==$posted_data["id1"]&&$r[0]["emotion_id"]!=$posted_data["txt1"])||(($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"]))||(($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"]))||(($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])))
     // {  
