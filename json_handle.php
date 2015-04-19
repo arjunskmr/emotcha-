@@ -18,26 +18,61 @@ $count=0;
         $posted_data = json_decode($_POST['json'], true);
        
     }
-    if(($r[0]["emotion_id"]==$posted_data["txt1"])&&($r[1]["emotion_id"]==$posted_data["txt2"])&&($r[2]["emotion_id"]==$posted_data["txt3"])&&($r[3]["emotion_id"]==$posted_data["txt4"]))
+    // if(($r[0]["emotion_id"]==$posted_data["txt1"])&&($r[1]["emotion_id"]==$posted_data["txt2"])&&($r[2]["emotion_id"]==$posted_data["txt3"])&&($r[3]["emotion_id"]==$posted_data["txt4"]))
+    // {
+    //     print_r("success");
+    //     die();
+    // }
+    // else{
+    //  print_r("faliure");
+    //  print_r($r[0]["emotion_id"]);
+    //  print_r($r[1]["emotion_id"]);
+    //  print_r($r[2]["emotion_id"]);
+    //  print_r($r[3]["emotion_id"]);
+    //  print_r($posted_data["id1"]);
+    //  print_r($posted_data["id2"]);
+    //  print_r($posted_data["id3"]);
+    //  print_r($posted_data["id4"]);
+    //  print_r($posted_data["txt1"]);
+    //  print_r($posted_data["txt2"]);
+    //  print_r($posted_data["txt3"]);
+    //  print_r($posted_data["txt4"]);
+    // }
+    $coun=0;
+    for($i=0;$i<4;$i++)
     {
-        print_r("success");
-        die();
-    }
-    else{
-     print_r("faliure");
-     print_r($r[0]["emotion_id"]);
-     print_r($r[1]["emotion_id"]);
-     print_r($r[2]["emotion_id"]);
-     print_r($r[3]["emotion_id"]);
-     print_r($posted_data["id1"]);
-     print_r($posted_data["id2"]);
-     print_r($posted_data["id3"]);
-     print_r($posted_data["id4"]);
-     print_r($posted_data["txt1"]);
-     print_r($posted_data["txt2"]);
-     print_r($posted_data["txt3"]);
-     print_r($posted_data["txt4"]);
-    }
+        if($r[$i]["emotion_id"]==$posted_data["txt1"])
+            {
+                if($r[$i]["image_id"]==$posted_data["id1"])
+                $coun++;
+                break;
+            }
+
+        if($r[$i]["emotion_id"]==$posted_data["txt2"])
+            {if($r[$i]["image_id"]==$posted_data["id2"])
+                $coun++;
+                break;
+            }
+        if($r[$i]["emotion_id"]==$posted_data["txt3"])
+            {if($r[$i]["image_id"]==$posted_data["id3"])
+                $coun++;
+                break;
+            }
+        if($r[$i]["emotion_id"]==$posted_data["txt4"])
+            {if($r[$i]["image_id"]==$posted_data["id4"])
+                $coun++;
+                break;
+            }
+        }
+        if($coun==4)
+        {
+          print_r("success");  
+        }
+        else{
+            printr("fail");
+        }
+
+
     // if(($r[0]["image_id"]==$posted_data["id1"]&&$r[0]["emotion_id"]!=$posted_data["txt1"])||(($r[1]["image_id"]==$posted_data["id2"]&&$r[1]["emotion_id"]!=$posted_data["txt2"]))||(($r[2]["image_id"]==$posted_data["id3"]&&$r[2]["emotion_id"]!=$posted_data["txt3"]))||(($r[3]["image_id"]==$posted_data["id4"]&&$r[3]["emotion_id"]!=$posted_data["txt4"])))
     // {  
     //     $count++;
