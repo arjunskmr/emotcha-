@@ -14,22 +14,22 @@ while($row = mysqli_fetch_array($val, MYSQL_ASSOC))
 $count=0;
   
     $posted_data = array();
-     echo $r[0]["image_id"];
-echo $posted_data["id1"];
-echo $r[0]["emotion_id"];
-echo posted_data["txt1"];
-echo $r[1]["image_id"];
-echo $posted_data["id2"];
-echo $r[1]["emotion_id"];
-echo posted_data["txt2"];
-echo $r[2]["image_id"];
-echo $posted_data["id3"];
-echo $r[2]["emotion_id"];
-echo posted_data["txt4"];
-echo $r[3]["image_id"];
-echo $posted_data["id4"];
-echo $r[4]["emotion_id"];
-echo posted_data["txt4"];
+     print_r($r[0]["image_id"]);
+print_r($posted_data["id1"];
+print_r($r[0]["emotion_id"];
+print_r(posted_data["txt1"];
+print_r($r[1]["image_id"];
+print_r($posted_data["id2"];
+print_r($r[1]["emotion_id"];
+print_r(posted_data["txt2"];
+print_r($r[2]["image_id"];
+print_r($posted_data["id3"];
+print_r($r[2]["emotion_id"];
+print_r(posted_data["txt4"];
+print_r($r[3]["image_id"];
+ print_r($posted_data["id4"];
+print_r($r[4]["emotion_id"];
+print_r(posted_data["txt4"];
 
 
     if (!empty($_POST['json'])) {
