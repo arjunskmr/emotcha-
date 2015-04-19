@@ -491,7 +491,7 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
 <div id="asd"></div>
   </div> 
  
-  <button type="button" class="button buttonBlue">TRY PASS
+  <button id="clk" type="button" class="button buttonBlue">TRY PASS
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
 </form>
@@ -632,11 +632,11 @@ span.l-6 {-webkit-animation-delay: 0;animation-delay: 0;-ms-animation-delay: 0;-
     dataType: 'text'
    })
 .done( function( data ) {
-  alert(data);
+  
     if(data!="faliure")
     {
-      $(".button").click(function(){
-       
+      $("#clk").click(function(){
+       alert("dasd");
     window.location=data;
 
     });
