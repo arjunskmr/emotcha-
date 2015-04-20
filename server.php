@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "root";
 $password = "limboda";
 
-$query = "UPDATE user_cred SET calls = calls-1  where `apikey` ='$_GET["apikey"]' AND `apisecret` ='$_GET["apisecret"]'";
+$query = "UPDATE user_cred SET calls = calls-1  where `apikey` ='$_GET["apikey"]'";
 if( !$_GET["apikey"] || !$_GET["apisecret"] )
   {    
   	 echo "<br>--missing appid or app secret--<br>";
