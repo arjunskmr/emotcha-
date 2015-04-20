@@ -15,13 +15,10 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   
   $query = "SELECT * FROM user_cred where `username` ='$userName' and `password` ='$pass'";
  
-  if($data)
-  {
   
-  }
 
 $result = mysqli_query($conn, $query);
-while($row = mysqli_fetch_array($result,,MYSQLI_ASSOC)){ 
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){ 
 
 echo "<html class=\"no-js\" lang=\"\">\n"; 
 echo "    <head>\n"; 
