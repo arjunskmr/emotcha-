@@ -19,7 +19,7 @@ function NewUser()
   $email = $_POST['email'];
   $password =  $_POST['pass'];
   $cpassword =  $_POST['cpass'];
-  $query = "INSERT INTO user_cred(username,userName,email,password,appid,appsecret) VALUES ('$userName','$email','$password','$password',$appid,$appsecret)";
+  $query = "INSERT INTO user_cred(username,email,password,appid,appsecret) VALUES ('$userName','$email','$password','$password',$appid,$appsecret)";
   $data = mysql_query ($query)or die(mysql_error());
   if($data)
   {
