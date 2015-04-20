@@ -12,9 +12,7 @@ $appsecret = substr(str_shuffle("0123ssdaasdadasdad456789abcdefghasdada2342ijklm
 
 
 $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
-function NewUser()
-{
-  
+
   $userName = $_POST['uname'];
   $email = $_POST['email'];
   $password =  $_POST['pass'];
@@ -25,10 +23,7 @@ function NewUser()
   {
   echo "YOUR REGISTRATION IS COMPLETED...";
   }
-}
-if(isset($_POST['submit']))
-{
-  SignUp();
-}
+
+
 ?>
 
