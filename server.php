@@ -6,7 +6,7 @@ $servername = "localhost";
 $username = "root";
 $password = "limboda";
 
-$query = "UPDATE user_cred SET calls = calls-1  where `apikey` ='$_GET["apikey"]'";
+
 if( !$_GET["apikey"] || !$_GET["apisecret"] )
   {    
   	 echo "<br>--missing appid or app secret--<br>";
@@ -14,12 +14,12 @@ if( !$_GET["apikey"] || !$_GET["apisecret"] )
      exit();
   }
  
- // if( ($_GET["apikey"]!="asdasd" )|| ($_GET["apisecret"] !="asdasdasd") )
- //  {    
- //  	 echo "<br>--incorrect appid or app secret--<br>";
+ if( ($_GET["apikey"]!="asdasd" )|| ($_GET["apisecret"] !="asdasdasd") )
+  {    
+  	 echo "<br>--incorrect appid or app secret--<br>";
       
- //     exit();
- //  }
+     exit();
+  }
  
 // Create connection
 $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
