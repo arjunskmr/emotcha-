@@ -17,7 +17,7 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   $data = mysqli_query($conn, $query);
   if($data)
   {
-  echo "YOUR REGISTRATION IS COMPLETED...";
+  
   }
 ?>
 <!doctype html>
@@ -342,7 +342,7 @@ footer img:focus , footer a:focus { outline: none; }
   <center><img src="super.png" style="border-radius: 100px;
     border: 4px solid #4183D7;width:150px; height:150px; background-color:#89C4F4"/></center><br><br>
   <div class="group">
-    <input type="text" disabled value="username : rebel_io"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" disabled value="username :<?php echo $uname;?>"><span class="highlight"></span><span class="bar"></span>
     
   </div>
   <div class="group">
