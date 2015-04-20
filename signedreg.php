@@ -351,7 +351,7 @@ echo "    <input type=\"email\" disabled value=\"email : ".$email."\"><span clas
 echo "   \n"; 
 echo "  </div>\n"; 
 echo "   <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"apikey : ".$appkey."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"apikey : ".$appid."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
