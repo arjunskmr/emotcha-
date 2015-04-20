@@ -27,7 +27,7 @@ function NewUser()
   }
 }
 
-?>
+?><!--
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -421,4 +421,4 @@ footer img:focus , footer a:focus { outline: none; }
         
        
     </body>
-</html>
+</html>-->
