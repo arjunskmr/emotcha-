@@ -20,7 +20,7 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   
   }
 
-  <?php
+  
 echo "<html class=\"no-js\" lang=\"\">\n"; 
 echo "    <head>\n"; 
 echo "        <meta charset=\"utf-8\">\n"; 
