@@ -13,14 +13,14 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   $email = $_POST['email'];
   $password =  $_POST['pass'];
   $cpassword =  $_POST['cpass'];
-  $query = "INSERT INTO user_cred(username,email,password,appid,appsecret,uid) VALUES ('$userName','$email','$password','$appid','$appsecret','$uid')";
+  $query = "INSERT INTO user_cred(username,email,password,appid,appsecret,uid,calls) VALUES ('$userName','$email','$password','$appid','$appsecret','$uid')";
   $data = mysqli_query($conn, $query);
   if($data)
   {
   
   }
 
-  
+
 echo "<html class=\"no-js\" lang=\"\">\n"; 
 echo "    <head>\n"; 
 echo "        <meta charset=\"utf-8\">\n"; 
@@ -336,25 +336,25 @@ echo "\n";
 echo "        <!-- Add your site or application content here -->\n"; 
 echo "        <hgroup>\n"; 
 echo "  <h1>A</h1>\n"; 
-echo "  <h2>Howdy #username?</h2>\n"; 
+echo "  <h2>Howdy ".$userName."</h2>\n"; 
 echo "</hgroup>\n"; 
 echo "<form>\n"; 
 echo "  <center><img src=\"super.png\" style=\"border-radius: 100px;\n"; 
 echo "    border: 4px solid #4183D7;width:150px; height:150px; background-color:#89C4F4\"/></center><br><br>\n"; 
 echo "  <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"username :\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"username :".$userName."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
-echo "    <input type=\"email\" disabled value=\"email : arjunskmr@gmail.com\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"email\" disabled value=\"email : ".$email."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "   \n"; 
 echo "  </div>\n"; 
 echo "   <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"apikey : asd123edasd23dasd4rfdfgasdadasda\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"apikey : ".$apikey."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"apisecret : asd23dansid9asmdad9adsnamd9a\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"apisecret : ".$apisecret."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
