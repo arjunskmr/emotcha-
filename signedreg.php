@@ -18,7 +18,7 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   $password =  $_POST['pass'];
   $cpassword =  $_POST['cpass'];
   $query = "INSERT INTO user_cred(username,email,password,appid,appsecret) VALUES ('$userName','$email','$password','$appid','$appsecret')";
-  $data = mysql_query ($query)or die(mysql_error());
+  $data = mysqli_query($conn, $query);
   if($data)
   {
   echo "YOUR REGISTRATION IS COMPLETED...";
