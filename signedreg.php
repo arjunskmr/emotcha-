@@ -8,12 +8,13 @@ $length = 30;
 $appid = substr(str_shuffle("012345fdsfsfsf6789aaaaaabcdefghijklmasdadadnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
 $appsecret = substr(str_shuffle("0123ssdaasdadasdad456789abcdefghasdada2342ijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
 $uid = rand();
+$calls=500;
 $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   $userName = $_POST['uname'];
   $email = $_POST['email'];
   $password =  $_POST['pass'];
   $cpassword =  $_POST['cpass'];
-  $query = "INSERT INTO user_cred(username,email,password,appid,appsecret,uid,calls) VALUES ('$userName','$email','$password','$appid','$appsecret','$uid')";
+  $query = "INSERT INTO user_cred(username,email,password,appid,appsecret,uid,calls) VALUES ('$userName','$email','$password','$appid','$appsecret','$uid','$calls')";
   $data = mysqli_query($conn, $query);
   if($data)
   {
@@ -350,15 +351,15 @@ echo "    <input type=\"email\" disabled value=\"email : ".$email."\"><span clas
 echo "   \n"; 
 echo "  </div>\n"; 
 echo "   <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"apikey : ".$apikey."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"apikey : ".$appkey."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"apisecret : ".$apisecret."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"apisecret : ".$appsecret."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo "  <div class=\"group\">\n"; 
-echo "    <input type=\"text\" disabled value=\"number of calls remaining : 222\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
+echo "    <input type=\"text\" disabled value=\"number of calls remaining : ".$calls."\"><span class=\"highlight\"></span><span class=\"bar\"></span>\n"; 
 echo "    \n"; 
 echo "  </div>\n"; 
 echo " \n"; 
