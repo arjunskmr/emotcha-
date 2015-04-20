@@ -324,7 +324,7 @@ echo "        <a href=\"index.html \">HOME</a>\n";
 echo "        <a href=\"docs.html\">DOCS</a>\n"; 
 echo "        <a href=\"sample.html\">SAMPLE</a>\n"; 
 echo "        <a href=\"signed.html\"><b>DASHBOARD</b></a>\n"; 
-echo "        <a href=\"#\">LOGOUT</a>\n"; 
+echo "        <a href=\"index.html\">LOGOUT</a>\n"; 
 echo "      </nav>\n"; 
 echo "      \n"; 
 echo "    </header>\n"; 

@@ -14,12 +14,12 @@ if( !$_GET["apikey"] || !$_GET["apisecret"] )
      exit();
   }
  
- if( ($_GET["apikey"]!="asdasd" )|| ($_GET["apisecret"] !="asdasdasd") )
-  {    
-  	 echo "<br>--incorrect appid or app secret--<br>";
+ // if( ($_GET["apikey"]!="asdasd" )|| ($_GET["apisecret"] !="asdasdasd") )
+ //  {    
+ //  	 echo "<br>--incorrect appid or app secret--<br>";
       
-     exit();
-  }
+ //     exit();
+ //  }
  
 // Create connection
 $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
