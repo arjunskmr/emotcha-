@@ -373,45 +373,144 @@ footer img:focus , footer a:focus { outline: none; }
   <h1>A</h1>
   <h2>Trouble Integrating?</h2>
 </hgroup>
-<h3>Client-side Code</h3>
-<pre class="syntax">function myFunction()
-{
-  var num = 12;
-  var rx = /[a-z]/;
-  alert("Hello World!");
-}</pre>
-<h3>Server-side Code</h3>
-<pre class="syntax">var jq = document.createElement('script');
-var protocol = location.protocol+"//";
-jq.src = protocol+"ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
-document.getElementsByTagName('head')[0].appendChild(jq);
-setTimeout(function(){
-    jQuery.noConflict()
-  $(".delete").click();
-  clickOk = function(){$(".ui_button.btn_1.chrome.blue.default-pulse").click();}
-  setInterval(clickOk,500); 
-}, 3000)</pre>
+<h3>Basic API call.</h3>
+<pre class="syntax"><br>
+    http://54.186.63.237/emotcha-/server.php?apikey=#yourapikeyhere&apisecret=#yourapisecrethere  
+    </pre>
+
+<h3>Ajax for API Call and validation.</h3>
+<pre class="syntax">
+ $.ajax({
+        url : 'server.php?apikey=#yourapikeyhere&apisecret=#yourapisecrethere',
+     
+        dataType: 'text',
+        
+        success: function(values){
+            //$('#asd').html(values);
+            var obj = JSON.parse(values);
+            var txt1=obj.emo_name;
+            var txt2=obj.emo_name1;
+            var txt3=obj.emo_name2;
+            var txt4=obj.emo_name3;
+            var emo1=obj.emo_id;
+            var emo2=obj.emo_id1;
+            var emo3=obj.emo_id2;
+            var emo4=obj.emo_id3;
+             var link1=obj.image_link;
+            var link2=obj.image_link1;
+            var link3=obj.image_link2;
+            var link4=obj.image_link3;
+            $('#emot1').text(emo1);
+            $('#emot2').text(emo2);
+            $('#emot3').text(emo3);
+            $('#emot4').text(emo4);
+            $('#emo1').css('background-image','url('+link1+')');
+            $('#emo2').css('background-image','url('+link2+')');
+            $('#emo3').css('background-image','url('+link3+')');
+            $('#emo4').css('background-image','url('+link4+')');
+             var count=0;
+    
+    var min = 0; 
+    var max = 100; 
+    var random1 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random2 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random3 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    var random4 = Math.floor(Math.random() * (max - min + 1)) + min; 
+    if(count==0){ $('#txt').text(txt1);}
+ var click1,click2,click3,click4;   
+
+ $('.pic').click(function(){
+ 
+    count++;
+     if(count==0){ $('#txt').text(txt1);
+     
+     
+     }
+    else if(count==1){ $('#txt').text(txt2);
+    click1=$(this).children().html(); 
+    
+    }
+    else if(count==2){ $('#txt').text(txt3);
+    click2=$(this).children().html();
+   
+    }
+    else if(count==3){$('#txt').text(txt4); 
+     click3=$(this).children().html();  
+   
+    }
+    else if(count==4){
+    
+      $("#load").css("display", "block"); 
+       click4=$(this).children().html(); 
+      
+         
+         var objt={txt1 : txt1, id1 : click1, txt2 : txt2, id2 : click2, txt3 : txt3, id3 : click3, txt4 : txt4, id4 : click4 };
+        var objt_i=JSON.stringify(objt);
+        $.ajax({
+    type: 'POST',
+    url: 'json_handle.php',
+    data: {json: objt_i},
+    dataType: 'text'
+   })
+.done( function( data ) {
+  
+    if(data!="faliure")
+    {
+      $("#clk").click(function(){
+       
+    window.location=data;
+
+    });
+    }
+    else{
+      
+      $('#load').html("<center>failed! please retry..</center>");
+      $('#txt').text("RETRY");
+    $("#ref").click(function() {
+      $('#load').hide();
+      
+      window.location="http://54.186.63.237/emotcha-/sample.html"; 
+      
+    })
+    }
+})
+.fail( function( data ) {
+   
+    alert('fail');
+    
+});
+    }
+    else{;} 
+   
+});
+ $("#emo1").css("top", random1+"px"); 
+ $("#emo2").css("top", random2+"px"); 
+ $("#emo3").css("top", random3+"px"); 
+ $("#emo4").css("top", random4+"px");   
+        },
+        error: function(){
+        // alert('failure');
+        }
+    });
+
+</pre>
+
 <h3>This is how the returned json looks.</h3>
 <pre class="syntax">{
-    "glossary": {
-        "title": "example glossary",
-    "GlossDiv": {
-            "title": "S",
-      "GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-          "SortAs": "SGML",
-          "GlossTerm": "Standard Generalized Markup Language",
-          "Acronym": "SGML",
-          "Abbrev": "ISO 8879:1986",
-          "GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-            "GlossSeeAlso": ["GML", "XML"]
-                    },
-          "GlossSee": "markup"
-                }
-            }
-        }
+    "emotcha": {
+        "session": "101",
+           "image_id":"emo1",
+           "emotion_id":"sad"
+         "session": "104",
+           "image_id":"emo4",
+           "emotion_id":"mindgasm"
+          "session": "103",
+           "image_id":"emo3",
+           "emotion_id":"desperate"
+          "session": "102",
+           "image_id":"emo2",
+           "emotion_id":"happy"    
+    
     }
 }</pre>
 

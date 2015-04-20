@@ -1,3 +1,33 @@
+<?php
+ini_set('display_errors', 1); 
+error_reporting(E_ALL);
+
+$servername = "localhost";
+$username = "root";
+$password = "limboda";
+$length = 30;
+
+$appid = substr(str_shuffle("012345fdsfsfsf6789aaaaaabcdefghijklmasdadadnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+$appsecret = substr(str_shuffle("0123ssdaasdadasdad456789abcdefghasdada2342ijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
+
+
+$conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
+function NewUser()
+{
+  
+  $userName = $_POST['uname'];
+  $email = $_POST['email'];
+  $password =  $_POST['pass'];
+  $cpassword =  $_POST['cpass'];
+  $query = "INSERT INTO user_cred(username,userName,email,password,appid,appsecret) VALUES ('$userName','$email','$password','$password',$appid,$appsecret)";
+  $data = mysql_query ($query)or die(mysql_error());
+  if($data)
+  {
+  echo "YOUR REGISTRATION IS COMPLETED...";
+  }
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -73,7 +103,7 @@ h1 { color: #636363; }
 h2 { color: #4a89dc; }
 
 form {
-    width: 380px;
+    width: 480px;
     margin: 1em auto;
     padding: 3em 2em 2em 2em;
     background: #fafafa;
@@ -302,8 +332,8 @@ footer img:focus , footer a:focus { outline: none; }
         <a href="index.html ">HOME</a>
         <a href="docs.html">DOCS</a>
         <a href="sample.html">SAMPLE</a>
-        <a href="reg.html"><b>REGISTER</b></a>
-        <a href="signin.html">SIGNIN</a>
+        <a href="signed.html"><b>DASHBOARD</b></a>
+        <a href="#">LOGOUT</a>
       </nav>
       
     </header>
@@ -314,29 +344,33 @@ footer img:focus , footer a:focus { outline: none; }
         <!-- Add your site or application content here -->
         <hgroup>
   <h1>A</h1>
-  <h2>Developer? Sign Up.</h2>
+  <h2>Howdy #username?</h2>
 </hgroup>
-<form method="POST" action="signedreg.php">
+<form>
+  <center><img src="super.png" style="border-radius: 100px;
+    border: 4px solid #4183D7;width:150px; height:150px; background-color:#89C4F4"/></center><br><br>
   <div class="group">
-    <input type="text" name="uname"><span class="highlight"></span><span class="bar"></span>
-    <label>UserName</label>
+    <input type="text" disabled value="username : rebel_io"><span class="highlight"></span><span class="bar"></span>
+    
   </div>
   <div class="group">
-    <input type="email" name="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="email" disabled value="email : arjunskmr@gmail.com"><span class="highlight"></span><span class="bar"></span>
+   
   </div>
    <div class="group">
-    <input type="password" name="pass"><span class="highlight"></span><span class="bar"></span>
-    <label>password</label>
+    <input type="text" disabled value="apikey : asd123edasd23dasd4rfdfgasdadasda"><span class="highlight"></span><span class="bar"></span>
+    
   </div>
   <div class="group">
-    <input type="password" name="cpass"><span class="highlight"></span><span class="bar"></span>
-    <label>confirm password</label>
+    <input type="text" disabled value="apisecret : asd23dansid9asmdad9adsnamd9a"><span class="highlight"></span><span class="bar"></span>
+    
+  </div>
+  <div class="group">
+    <input type="text" disabled value="number of calls remaining : 222"><span class="highlight"></span><span class="bar"></span>
+    
   </div>
  
-  <button type="button" class="button buttonBlue">SignUp
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
+  
 </form>
 <footer><a href="http://www.polymer-project.org/" target="_blank"><img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
   <p>Secure forms? Delivered.  <a href="http://www.tudlr.com/" target="_blank">EMOTCHA</a></p>
