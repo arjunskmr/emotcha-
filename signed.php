@@ -14,14 +14,14 @@ $conn = mysqli_connect ($servername, $username, $password, "emotcha_db");
   $pass = $_POST['pass'];
   
   $query = "SELECT * FROM user_cred where `username` ='$userName' and `password` ='$pass'";
-  $data = mysqli_query($conn, $query);
+ 
   if($data)
   {
   
   }
 
-$result = mysql_query($query);
-while($row = mysql_fetch_array($result)){ 
+$result = mysqli_query($conn, $query);
+while($row = mysqli_fetch_array($result,,MYSQLI_ASSOC)){ 
 
 echo "<html class=\"no-js\" lang=\"\">\n"; 
 echo "    <head>\n"; 
