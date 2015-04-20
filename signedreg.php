@@ -26,6 +26,9 @@ function NewUser()
   echo "YOUR REGISTRATION IS COMPLETED...";
   }
 }
-
+if(isset($_POST['submit']))
+{
+  SignUp();
+}
 ?>
 
