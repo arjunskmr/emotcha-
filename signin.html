@@ -316,19 +316,19 @@ footer img:focus , footer a:focus { outline: none; }
   <h1>A</h1>
   <h2>Already Done? Sign In.</h2>
 </hgroup>
-<form>
+<form method="POST" action="signed.php">
   
   <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
-    <label>Email</label>
+    <input type="text" name="uname" ><span class="highlight"></span><span class="bar"></span>
+    <label>username</label>
   </div>
    <div class="group">
-    <input type="password"><span class="highlight"></span><span class="bar"></span>
+    <input type="password" name="pass"><span class="highlight"></span><span class="bar"></span>
     <label>password</label>
   </div>
   
  
-  <button type="button" class="button buttonBlue">LOGIN
+  <button type="submit" class="button buttonBlue">LOGIN
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
 </form>
